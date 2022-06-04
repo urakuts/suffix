@@ -1,0 +1,404 @@
+b*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* максимальна ширана всіх контейнерів і вирівнювання по середині */
+.container{
+    max-width: 1195px;
+    margin: 0 auto;
+    /* border: 1px solid #000; */
+}
+/* шапка */
+
+/* меню */
+.main-menu{
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    
+}
+
+#nav-menu{
+    width: 40px;
+    height: 40px;
+    
+}
+.menu{
+    position: absolute;
+    top: 60px;
+    left: -400px;
+    padding: 50px;
+    width: 250px;
+    background: white;
+    box-shadow: inherit;
+    transition: left 0.5s ease;
+    
+}
+.active{
+    left: 15px;
+}
+#menu li{
+    display: block;
+    padding: 10px;
+}
+#menu li a{
+    color: #000;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+
+.header-name {
+    padding: 55px 0;
+     
+}
+/* основна частина */
+/* блоги */
+.technology, .galery{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    margin-bottom: 40px;
+    
+}
+.technology-img img{
+    width: 710px;
+    height: 562px;
+    
+  
+}
+.technology-text{ 
+    width: 710px;
+    height: 562px;
+    background: #000;
+}
+.technology-text p{
+    padding: 100px 100px 0 100px;
+    color: white;
+}
+.technology-text h1{
+    padding: 20px 100px;
+    color: white;
+    text-transform: uppercase;
+}
+.technology-text h5{
+    color: white;
+    padding: 20px 100px;
+}
+.technology-text .wrap{
+    justify-content: start;
+    padding: 20px 100px;
+}
+
+.featured{
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.blog{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.big-blog{
+    width: 557px;
+}
+.blog-data{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+.smoll-blog{
+    width: 363px;
+
+}
+.bl-text h3{
+    text-transform: uppercase;
+}
+/* кнопка */
+#btn{
+    display: block;
+    width: 200px;
+    padding: 15px;
+    margin-bottom: 40px;
+    background-color: #000;
+    text-align: center;
+    border: 1px solid white;
+}
+#btn a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* Галерея */
+
+.galery-img{
+    width: 572px;
+    
+}
+.galery-text{
+    width: 623px;
+    height: 361px;
+    background: #000;
+}
+.galery-text h1{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 100px;
+}
+.galery-text li{
+    text-align: center;
+}
+/* підвал */
+footer{
+    height: 130px;
+    width: 100%;
+    background: #000;
+}
+footer .wrap{
+    padding: 40px;
+
+}
+footer p{
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+/* Для планшетів */
+/* медіазапити */
+@media (max-width: 1200px){
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+      
+    }
+    .technology, .galery, .blog{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    
+    .technology-img, .technology-img img{
+        max-width: 1200px;
+        width: 100%; 
+        height: auto;
+
+    }
+    .technology-text{
+        max-width: 1200px;
+        width: 100%;
+        height: auto;
+        max-height: 562px;
+        /* background: #000; */
+    }
+    
+    .big-blog, .bl-img img{
+       max-width: 500px;
+       width: 100%;
+    }
+    .smoll-blog{
+        max-width: 300px;
+        width: 100%;
+    }
+    .smoll-blog .bl-img img{
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .galery-img img{
+        max-width: 500px;
+        width: 100%;
+        
+    }
+    .galery-text{
+        max-width: 500px;
+        width: 100%;
+        max-height: 361px;
+        height: auto;
+        /* background: #000; */
+
+    }
+    .active{
+        left: 0;
+    }
+        
+        
+}
+@media (max-width: 768px){
+    .container{
+        max-width: 700px;
+        margin: 0 auto;
+       
+    }
+    .technology, .galery, .blog{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    .technology-img img{
+        max-width: 768px;  
+        width: 100%;
+        
+
+    }
+    .technology-text{
+        max-width: 768px;
+        width: 100%;
+        height: auto;
+        max-height: 562px;
+        /* background: #000; */
+    }
+    
+    .big-blog, .bl-img img{
+       max-width: 350px;
+       width: 100%;
+    }
+    .smoll-blog{
+        max-width: 200px;
+        width: 100%;
+    
+    }
+    .smoll-blog .bl-img img{
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .galery-img img{
+        max-width: 350px;
+        width: 100%;
+        
+    }
+    .galery-text{
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+        max-height: 361px;
+        /* background: #000; */
+
+    }
+    .active{
+    left: 0;
+    }
+}
+@media(max-width: 390px){
+    .header-name {
+        padding: 25px 0;
+         
+    }
+    .container{
+        max-width: 390px;
+        margin: 0 auto;
+        
+    }
+    .technology, .galery, .blog{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    
+    .technology-img img{
+        max-width: 390px;
+        width: 100%;
+
+    }
+    .technology-text{
+        max-width: 390px;
+        width: 100%;
+    }
+    .technology-text p{
+        padding: 10px 10px 0 10px;
+        color: white;
+    }
+    .technology-text h1{
+        padding: 10px 20px;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .technology-text h5{
+        color: white;
+        padding: 10px 20px;
+    }
+    .technology-text .wrap{
+        justify-content: start;
+        padding: 10px 20px;
+    }
+    .featured{
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .big-blog, .bl-img img{
+       max-width: 390px;
+       width: 100%;
+    }
+    .smoll-blog{
+        max-width: 390px;
+        width: 100%;
+    
+    }
+    .smoll-blog .bl-img img{
+        max-width: 390px;
+        width: 100%;
+    }
+
+    .galery-img img{
+        max-width: 390px;
+        width: 100%;
+        
+    }
+    .galery-text{
+        max-width: 390px;
+        width: 100%;
+        /* height: auto; */
+        /* background: #000; */
+
+    }
+    .galery-text h1{
+        padding-top: 10px;
+    }
+    .main-menu{
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        
+    }
+    #menu{
+        padding: 50px;
+        width: 200px;
+        background: white;
+        box-shadow: inherit;
+        transition: left 0.5s ease;
+    } 
+    .active{
+        left: 0;
+    }
+    #btn{
+        display: block;
+        max-width: 150px;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+        background-color: #000;
+        text-align: center;
+        border: 1px solid white;
+    }
+    h1, h2, h3, h4, h5{
+        padding: 0;
+        margin: 0;
+    }
+   
+}
+
